@@ -1,12 +1,13 @@
 <script>
-	import Footer from '../components/Footer.svelte';
-	import Nav from '../components/Nav.svelte';
+	import Navbar from '$lib/Navbar.svelte';
+	import Footer from '$lib/Footer.svelte';
+	import '../styles/global.css';
 
-	import '../scss/main.scss';
+	export const prerender = true;
 </script>
 
-<!-- <Nav /> -->
-<main>
+<div class="layout">
+	<Navbar />
 	<slot />
-</main>
-<!-- <Footer /> -->
+	<Footer />
+</div>
