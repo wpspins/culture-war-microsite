@@ -9,7 +9,11 @@ const config = {
 	preprocess: sveltePreprocess(),
 	kit: {
 		adapter: adapter({
-			fallback: '404.html'
+			pages: 'build',
+			assets: 'build',
+			fallback: '404.html',
+			precompress: false,
+			strict: true,
 		}),
 	}
 };
